@@ -1,0 +1,18 @@
+AllCops:
+  NewCops: enable
+
+Metrics/MethodLength:
+  CountAsOne: ["array", "hash", "heredoc"]
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Layout/LineLength:
+  Exclude:
+    - 'spec/**/*'
+
