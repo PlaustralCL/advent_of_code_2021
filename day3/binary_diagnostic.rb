@@ -24,7 +24,7 @@ def epsilion(frequency_data)
   end
 end
 
-diagnostic_report = File.readlines("test_data.txt", chomp: true).map(&:chars)
+diagnostic_report = File.readlines("input.txt", chomp: true).map(&:chars)
 frequencies = transpose_diagnostic_data(diagnostic_report)
 gamma_rate = gamma(frequencies).join.to_i(2)
 epsilion_rate = epsilion(frequencies).join.to_i(2)
