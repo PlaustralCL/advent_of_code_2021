@@ -50,7 +50,7 @@ class Dice
 end
 
 player1 = Player.new("Player 1", 4)
-player2 = Player.new("Player 2", 8)
+player2 = Player.new("Player 2", 3)
 die = Dice.new
 
 current_player = player1
@@ -78,7 +78,9 @@ end
 puts "#{player1.name} score is #{player1.score}"
 puts "#{player2.name} score is #{player2.score}"
 puts "The die was rolled #{die.number_of_rolls} times"
+losing_score = player1.score < player2.score ? player1.score : player2.score
 
+puts "AOC answer is #{losing_score * die.number_of_rolls}"
 
 
 
